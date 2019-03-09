@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Lab1App</string>
+    <string name="activity1_name">MainActivity</string>
+    <string name="activity2_name">OtherActivity1</string>
+    <string name="activity3_name">OtherActivity2</string>
+    <string name="button_text">Luck</string>
+    <string name="welcome">Welcome</string>
+    <string name="goto_string_activity1">Goto Main menu Activity</string>
+    <string name="goto_string_activity2">Goto Cat Activity</string>
+    <string name="goto_string_activity3">Goto Other Activity</string>
+    <string name="to_activity_1">to Activity 1</string>
+    <string name="title_activity_uihell">UIHellActivity</string>
 </resources>
