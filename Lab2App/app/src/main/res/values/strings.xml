@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Lab2App</string>
+    <string name="time_constant">00:00:00</string>
+    <string name="geolocation_activity">Geolocation Activity</string>
+    <string name="start">Start</string>
+    <string name="_continue">Continue</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
 </resources>
