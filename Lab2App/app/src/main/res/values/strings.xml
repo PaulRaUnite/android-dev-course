@@ -6,4 +6,8 @@
     <string name="_continue">Continue</string>
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
+    <string name="update_location">Update location</string>
+    <string name="unknown_location">Unknown location</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="location_received">Location received</string>
 </resources>

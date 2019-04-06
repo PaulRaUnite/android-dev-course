@@ -1,7 +1,6 @@
 package com.example.lab2app;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -9,13 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class StopwatchActivity extends AppCompatActivity {
     TextView clock_field;
 
     Button control_button, reset;
     boolean running;
 
-    long MillisecondTime, StartTime, TimeBuff, UpdateTime = 0L;
+    long MillisecondTime, StartTime, UpdateTime = 0L;
 
     Handler handler;
 
@@ -35,7 +36,6 @@ public class StopwatchActivity extends AppCompatActivity {
 
     public void switchTimer(View view) {
         if (running) {
-            TimeBuff += MillisecondTime;
             handler.removeCallbacks(runnable);
             control_button.setText(R.string._continue);
         } else {
@@ -48,14 +48,13 @@ public class StopwatchActivity extends AppCompatActivity {
     }
 
     public void resetTimer(View view) {
-        reset.setEnabled(false);
         if (!running) {
+            reset.setEnabled(false);
             control_button.setText(R.string.start);
         }
 
         MillisecondTime = 0;
         StartTime = SystemClock.uptimeMillis();
-        TimeBuff = 0;
         UpdateTime = 0;
         Seconds = 0;
         Minutes = 0;
@@ -67,7 +66,7 @@ public class StopwatchActivity extends AppCompatActivity {
     protected Runnable runnable = new Runnable() {
         public void run() {
             MillisecondTime = SystemClock.uptimeMillis() - StartTime;
-            UpdateTime = TimeBuff + MillisecondTime;
+            UpdateTime = MillisecondTime;
             Seconds = (int) (UpdateTime / 1000);
             Minutes = Seconds / 60;
             Seconds = Seconds % 60;
@@ -78,4 +77,8 @@ public class StopwatchActivity extends AppCompatActivity {
         }
     };
 
+    public void goto_geolocation(View view) {
+        Intent k = new Intent(StopwatchActivity.this, GeoActivity.class);
+        startActivity(k);
+    }
 }

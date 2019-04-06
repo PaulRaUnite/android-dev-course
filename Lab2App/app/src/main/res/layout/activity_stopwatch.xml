@@ -21,6 +21,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/goto_geo"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:onClick="goto_geolocation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
